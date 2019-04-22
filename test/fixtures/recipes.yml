@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vegetarian: false
+  vegan: false
+  glutenFree: false
+  dairyFree: false
+  veryHealthy: false
+  cheap: false
+  popular: false
+  sustainable: false
+  ketogenic: false
+  whole30: false
+  weightWatcherPoints: 1
+  servings: 1
+  cookTime: 1
+  likes: 1
+  readyInMinutes: 1
+  sourceUrl: MyString
+  spoontacularUrl: MyString
+  name: MyString
+  imageUrl: MyString
+  instructions: MyText
+
+two:
+  vegetarian: false
+  vegan: false
+  glutenFree: false
+  dairyFree: false
+  veryHealthy: false
+  cheap: false
+  popular: false
+  sustainable: false
+  ketogenic: false
+  whole30: false
+  weightWatcherPoints: 1
+  servings: 1
+  cookTime: 1
+  likes: 1
+  readyInMinutes: 1
+  sourceUrl: MyString
+  spoontacularUrl: MyString
+  name: MyString
+  imageUrl: MyString
+  instructions: MyText
