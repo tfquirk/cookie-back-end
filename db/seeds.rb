@@ -2,7 +2,10 @@
 require 'byebug'
 require 'rest-client'
 
-API_KEY = ''
+# You will want to run this seed file 3 or 4 times. Please keep track or your
+# API call limitations, and any costs you will incur if you make too many requests
+
+API_KEY = '' # Your API Key here
 
 recipeData = RestClient.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=100", {'X-RapidAPI-Key': API_KEY, accept: :json})
 
@@ -32,12 +35,12 @@ recipes.each do |recipe|
 
   recipe = Recipe.create(name: name, readyInMinutes: readyInMinutes, instructions: instructions, sourceUrl: sourceUrl, servings: servings, whole30: whole30, ketogenic: ketogenic, dairyFree: dairyFree, glutenFree: glutenFree, vegan: vegan, vegetarian: vegetarian, veryHealthy: veryHealthy, cookTime: cookTime, imageUrl: imageUrl)
 
-  ingredients.each do |i|
-    name = i["name"]
-    imageUrl = i["image"]
-    original_string = i["originalString"]
-    unit = i["unit"]
-    amount = i["amount"]
+  ingredients.each do |ingredient|
+    name = ingredient["name"]
+    imageUrl = ingredient["image"]
+    original_string = ingredient["originalString"]
+    unit = ingredient["unit"]
+    amount = ingredient["amount"]
 
     ingredient = Ingredient.find_or_create_by(name: name)
     ingredient.update(imageUrl: imageUrl)
